@@ -56,7 +56,7 @@ fn2();
 fn();
 ```
 
-먼저 scope의 내용은 아래와 같다.
+샘플 코드의 scope의 내용을 확인해보면 아래와 같다.
 
 ```javascript
 Inner function scope:
@@ -64,7 +64,7 @@ function fn () { // (0x7fed33048ee0) (41, 370)
   // NormalFunction
   // 2 heap slots
   // local vars:
-  LET next2;  // (0x7fed3304b4b0) never assigned
+  LET next2;  // (0x7fed3304b4b0) never assigned -> 아직 할당이 일어나지 않음
   LET num;  // (0x7fed3304b720) never assigned
   LET next3;  // (0x7fed3304b4f8) never assigned
   LET next4;  // (0x7fed3304b540) never assigned
