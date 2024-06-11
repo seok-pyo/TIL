@@ -30,10 +30,11 @@ function dirToJson(dirPath) {
     // 그런 다음, 각 이름에 대해 dirToJson 함수를 재귀적으로 호출하여 info.children 배열에 추가한다.
   } else {
     info.type = 'file';
-    return info;
   }
+  return info;
   // 'stats'가 디렉토리가 아닌 경우(즉, 파일인 경우) 'info' 객체에 'type' 속성을 추가하고 'file'로 설정한다.
   // 최종적으로 'info' 객체를 반환한다.
+}
 ```
 명령줄 인자를 처리하는 속성인 'process.argv'를 사용하여 두 번째 요소, node의 입력값(주소)을 디렉토리 주소로 사용하거나,
 기본값으로는 현재 디렉토리 위치를 시작점으로 설정한다.
