@@ -22,12 +22,12 @@ function dirToJson(dirPath) {
   // info 객체 생성.
 
   if (stats.isDirectory()) {
-    info.type = 'directory';;
+    info.type = 'directory';
     info.children = fs
       .readdirSync(dirPath)
       .map((child) => dirToJson(path.join(dirPath, child)));
     // fs.readdirSync 함수를 이용해서 'dirPath' 디렉토리의 모든 파일과 디렉토리 이름을 동기적으로 읽는다.
-       그런 다음, 각 이름에 대해 dirToJson 함수를 재귀적으로 호출하여 info.children 배열에 추가한다.
+    // 그런 다음, 각 이름에 대해 dirToJson 함수를 재귀적으로 호출하여 info.children 배열에 추가한다.
   } else {
     info.type = 'file';
     return info;
