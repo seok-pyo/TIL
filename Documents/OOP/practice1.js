@@ -25,7 +25,8 @@ const handler = {
 };
 
 const hong = new Emp();
-new Proxy(hong, handler);
+
+Reflect.defineProperty(hong.prototype, 'fullName', new Proxy(hong, handler));
 
 hong.fullName = 'kildong Hong';
 console.log(hong.fullName);

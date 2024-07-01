@@ -17,6 +17,10 @@ Array.prototype.filterBy = function (k, v) {
   return this.filter((e) => e[k] === v);
 };
 
+Array.prototype.rejectBy = function (k, v) {
+  return this.filter((e) => e[k] !== v);
+};
+
 Array.prototype.sortBy = function (c) {
   const [k, d] = c.split(':');
   return k && d
@@ -24,12 +28,25 @@ Array.prototype.sortBy = function (c) {
     : [...this].sort((a, b) => (a[k] < b[k] ? -1 : 1));
 };
 
+Object.defineProperties(Array.prototype, {
+  firstObject: {
+    get: function () {
+      return this[0];
+    },
+  },
+  lastObject: {
+    get: function () {
+      return this[this.length - 1];
+    },
+  },
+});
+
 assert.deepStrictEqual(users.mapBy('id'), [1, 3, 2]);
 assert.deepStrictEqual(users.mapBy('name'), ['Hong', 'Lee', 'Kim']);
 assert.deepStrictEqual(users.filterBy('id', 2), [kim]);
-// assert.deepStrictEqual(users.rejectBy('id', 2), [hong, lee]);
+assert.deepStrictEqual(users.rejectBy('id', 2), [hong, lee]);
 assert.deepStrictEqual(users.findBy('name', 'Kim'), kim);
 assert.deepStrictEqual(users.sortBy('name'), [hong, kim, lee]);
 assert.deepStrictEqual(users.sortBy('name:desc'), [lee, kim, hong]);
-// assert.deepStrictEqual(users.firstObject, hong);
-// assert.deepStrictEqual(users.lastObject, kim);
+assert.deepStrictEqual(users.firstObject, hong);
+assert.deepStrictEqual(users.lastObject, kim);
