@@ -62,16 +62,9 @@ class Routes {
     let s = LINE2.indexOf(this.start);
     let e = LINE2.indexOf(this.end);
     let t;
-    let flag = false;
-    let found = false;
     return {
       next: () => {
-        // if (s > LINE2.length - 1) {
-        //   s = 0;
-        //   flag = true;
-        // }
-        // if (LINE2[s] !== this.end) {
-
+        // 조건이 맞지 않는 경우, 예외 처리
         s = s % LINE2.length;
 
         if (LINE2[t] !== LINE2[s]) {
@@ -85,11 +78,6 @@ class Routes {
             done: true,
           };
         }
-
-        // }
-        // } else {
-        //   return { done: true };
-        // }
       },
     };
   }
