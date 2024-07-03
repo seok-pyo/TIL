@@ -3,8 +3,6 @@
 
 const assert = require('assert');
 
-// Collection 설계 고민
-
 class Collection {
   constructor(arg) {
     if (Array.isArray(arg)) {
@@ -120,32 +118,135 @@ class ArrayList extends Collection {
     return arr;
   }
 
-  arrayToList(arr) {}
+  arrayToList(arr) {
+    let node;
+    for (let i = arr.length - 1; i >= 0; i -= 1) {
+      node = node ? { value: arr[i], rest: node } : { value: arr[i] };
+    }
+    return node;
+  }
 
   toString() {
     console.log(this.data);
   }
 
-  visit(data, val, idx) {
+  visitAdd(data, val, idx) {
     if (idx === 0) {
-      return { value: val, rest: data };
+      if (data) return { value: val, rest: data };
+      else return { value: val };
     } else {
-      data = { value: data.value, rest: this.visit(data.rest, val, --idx) };
+      data = { value: data.value, rest: this.visitAdd(data.rest, val, --idx) };
       return data;
     }
   }
 
   add(v, i) {
-    this.data = this.visit(this.data, v, i);
+    this.data = this.visitAdd(this.data, v, i);
+    this._length++;
+  }
+
+  visitRemove(data, val) {
+    if (data.value === val) {
+      if (data.rest) return data.rest;
+      return;
+    } else {
+      let getRest = this.visitRemove(data.rest, val);
+      if (getRest) data = { value: data.value, rest: getRest };
+      else data = { value: data.value };
+      return data;
+    }
+  }
+
+  remove(val) {
+    this.data = this.visitRemove(this.data, val);
+    this._length--;
+  }
+
+  visit(data, idx) {
+    if (idx > this.length) return;
+    if (idx === 0) return data;
+    else return this.visit(data.rest, --idx);
+  }
+
+  get(idx) {
+    let res = this.visit(this.data, idx);
+    return res.value;
+  }
+
+  set(i, v) {
+    return this.add(v, i);
+  }
+
+  *iterator() {
+    let node = this.data;
+    while (node) {
+      yield node;
+      node = node.rest;
+    }
+  }
+
+  indexOf(val) {
+    let node = this.data;
+    let idx = -1;
+    let found = false;
+    while (!found) {
+      idx++;
+      if (!node) return;
+      if (node.value === val) {
+        found = true;
+        return idx;
+      }
+      node = node.rest;
+    }
+  }
+
+  contains(val) {
+    let ret = this.indexOf(val);
+    return ret ? true : false;
+  }
+
+  size() {
+    return this._length;
+  }
+
+  get peek() {
+    return this.visit(this.data, this._length - 1);
+  }
+
+  clear() {
+    this.data = {};
+    return 'all clear';
   }
 }
 
 const al = new ArrayList([1, 2]);
-console.log(al);
 
 al.toString();
-al.add(5, 1);
+al.add(5, 2);
 al.toString();
+al.remove(5);
+al.toString();
+console.log(al.get(1));
+al.set(1, 300);
+al.set(1, 300);
+al.toString();
+
+console.log(al.iterator().next());
+console.log(al.indexOf(300));
+console.log(al.contains(300));
+console.log(al.size());
+console.log(al);
+al.set(1, 305);
+console.log(al);
+console.log(al.size());
+console.log(al.isEmpty);
+console.log(al.peek);
+
+console.log(al.arrayToList([12, 34, 34]));
+
+console.log(al.clear());
+console.log(al.data);
+// al.toString();
 
 // assert
 // assert.deepStrictEqual(
