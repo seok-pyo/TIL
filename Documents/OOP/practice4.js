@@ -1,75 +1,80 @@
-class collections {
+class Collection {
   constructor(arg) {
-    arg?.forEach((item, index) => {
-      this[index] = item;
-    });
-    this.length = arg ? arg.length : 0;
-  }
-
-  clear() {
-    for (let i = 0; i < this.length; i += 1) {
-      delete this[i];
+    if (Array.isArray(arg)) {
+      arg?.forEach((item, index) => {
+        this[index] = item;
+      });
+      this._length = arg.length;
+    } else {
+      this[0] = arg;
+      this._length = 1;
     }
-    this.length = 0;
   }
 
-  toArray() {
+  clear(data) {
+    for (let i = 0; i < data._length; i += 1) {
+      delete data[i];
+    }
+    data._length = 0;
+  }
+
+  toArray(data) {
     let arr = [];
-    for (let i = 0; i < this.length; i += 1) {
-      arr[i] = this[i];
+    for (let i = 0; i < data._length; i += 1) {
+      arr[i] = data[i];
     }
     return arr;
   }
 
-  print() {
-    for (let i = 0; i < this.length; i += 1) {
-      console.log(this[i].toString());
+  print(data) {
+    for (let i = 0; i < data._length; i += 1) {
+      console.log(data[i].toString());
     }
   }
 
   remove() {
     if (this instanceof Stack) {
-      if (this.length === 0) return undefined;
-      delete this[length];
-      this.length--;
+      if (this._length === 0) return undefined;
+      delete this[_length];
+      this._length--;
     } else if (this instanceof Queue) {
-      if (this.length === 0) return undefined;
+      if (this._length === 0) return undefined;
       delete this[0];
-      this.length--;
-      for (let i = 0; i < this.length; i += 1) {
+      this._length--;
+      for (let i = 0; i < this._length; i += 1) {
         this[i] = this[i + 1];
       }
-      delete this[this.length];
+      delete this[this._length];
     }
   }
 
   get isEmpty() {
-    if (this.length === 0) return true;
+    if (this._length === 0) return true;
     return false;
   }
 
   get peek() {
     if (this instanceof Stack) {
-      if (this.length === 0) return undefined;
-      return this[this.length - 1];
+      if (this._length === 0) return undefined;
+      return this[this._length - 1];
     } else if (this instanceof Queue) {
-      if (this.length === 0) return undefined;
+      if (this._length === 0) return undefined;
       return this[0];
     }
   }
 
   get poll() {
     if (this instanceof Stack) {
-      if (this.length === 0) return undefined;
-      const last = this[this.length - 1];
-      delete this[this.length - 1];
-      this.length--;
+      if (this._length === 0) return undefined;
+      const last = this[this._length - 1];
+      delete this[this._length - 1];
+      this._length--;
       return last;
     } else if (this instanceof Queue) {
-      if (this.length === 0) return undefined;
+      if (this._length === 0) return undefined;
       const first = this[0];
       delete this[0];
-      this.length--;
+      this._length--;
 
       return first;
     }
@@ -86,50 +91,54 @@ class collections {
   }
 }
 
-class Stack extends collections {
+class Stack extends Collection {
   constructor(arg) {
     super(arg);
   }
 
   push(data) {
-    this[this.length] = data;
-    this.length++;
+    this[this._length] = data;
+    this._length++;
   }
 
   pop() {
-    if (this.length === 0) return undefined;
+    if (this._length === 0) return undefined;
 
-    const last = this[this.length - 1];
-    this.length--;
-    delete this[this.length - 1];
+    const last = this[this._length - 1];
+    this._length--;
+    delete this[this._length - 1];
     return last;
   }
 }
 
-class Queue extends collections {
+class Queue extends Collection {
   constructor(arg) {
     super(arg);
   }
 
   enqueue(ele) {
-    this[this.length] = ele;
-    this.length++;
+    this[this._length] = ele;
+    this._length++;
   }
 
   dequeue() {
-    if (this.length === 0) return undefined;
+    if (this._length === 0) return undefined;
 
     const first = this[0];
 
-    for (let i = 1; i < this.length; i += 1) {
+    for (let i = 1; i < this._length; i += 1) {
       this[i - 1] = this[i];
     }
-    this.length--;
-    delete this[this.length];
+    this._length--;
+    delete this[this._length];
 
     return first;
   }
 }
 
-const stack = new Stack([1, 2]);
-console.log(stack.length);
+const stack = new Stack(1, 2, 3);
+console.log(stack._length);
+// stack.clear();
+collections.clear(stack);
+console.log(stack);
+console.log(stack.isEmpty);

@@ -55,7 +55,6 @@ class Routes {
   constructor(s, e) {
     this.start = s;
     this.end = e;
-    // this.length = LINE2.indexOf(e) - LINE2.indexOf(s) + 1;
   }
 
   [Symbol.iterator]() {

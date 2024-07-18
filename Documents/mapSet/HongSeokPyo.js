@@ -1,36 +1,36 @@
 // Index
 // 객체 지향 프로그래밍 | 이터레이터와 제너레이터 | 맵과 셋 | Number, Math, Date | 문자열과 정규표현식
 
-// const assert = require('assert');
+const assert = require('assert');
 
 // 객체 지향 프로그래밍 ################################################ 198p ~ 201p
 
-const handler = {
-  get(target, prop) {
-    if (prop === 'fullName') {
-      return `${target.firstName} ${target.lastName}`;
-    } else {
-      return target[prop] ? target[prop] : undefined;
-    }
-  },
-  set(target, prop, value) {
-    if (prop === 'fullName') {
-      const [f, l] = value.split(' ');
-      target.firstName = f && l ? f : target.firstName;
-      target.lastName = f && l ? l.toUpperCase() : f.toUpperCase();
-    } else {
-      target[prop] = value;
-    }
-    return true;
-  },
-};
+// const handler = {
+//   get(target, prop) {
+//     if (prop === 'fullName') {
+//       return `${target.firstName} ${target.lastName}`;
+//     } else {
+//       return target[prop] ? target[prop] : undefined;
+//     }
+//   },
+//   set(target, prop, value) {
+//     if (prop === 'fullName') {
+//       const [f, l] = value.split(' ');
+//       target.firstName = f && l ? f : target.firstName;
+//       target.lastName = f && l ? l.toUpperCase() : f.toUpperCase();
+//     } else {
+//       target[prop] = value;
+//     }
+//     return true;
+//   },
+// };
 
-class Emp {
-  constructor() {
-    this.firstName;
-    this.lastName;
-  }
-}
+// class Emp {
+//   constructor() {
+//     this.firstName;
+//     this.lastName;
+//   }
+// }
 
 // const hong3 = new Emp();
 // hong.fullName = 'Kildong Hong'; // split하여 firstName, lastName 셋
@@ -38,11 +38,11 @@ class Emp {
 // hong.fullName = 'Lee';
 // console.log(hong3.firstName, hong3.lastName);
 
-const hong3 = new Proxy(new Emp(), handler);
-hong3.fullName = 'Kildong Hong';
-console.log(hong3.fullName); // 'Kildong HONG' 출력하면 통과!
-hong3.fullName = 'Lee';
-console.log(hong3.firstName, hong3.lastName);
+// const hong3 = new Proxy(new Emp(), handler);
+// hong3.fullName = 'Kildong Hong';
+// console.log(hong3.fullName); // 'Kildong HONG' 출력하면 통과!
+// hong3.fullName = 'Lee';
+// console.log(hong3.firstName, hong3.lastName);
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
@@ -299,11 +299,6 @@ console.log(hong3.firstName, hong3.lastName);
 //   console.log(stack.isEmpty);
 
 // 이터레이터와 제너레이터 ################################################ 211p ~ 214p
-
-// const readline = require('readline');
-// const { stdin: input, stdout: output } = require('process');
-
-// const rl = readline.createInterface({ input, output });
 
 // function* add() {
 //   const f = yield '첫 번째 수?';
@@ -780,6 +775,8 @@ console.log(hong3.firstName, hong3.lastName);
 
 // 문자열과 정규 표현식 ################################################ 260p ~ 263p
 
+// padStart 내용 추가
+
 // const total = { price: 45000, vat: 4500 };
 
 // let vals = 'vlas';
@@ -803,9 +800,9 @@ console.log(hong3.firstName, hong3.lastName);
 // const 기 = '기'.charCodeAt(0);
 // const 다 = '다'.charCodeAt(0);
 
-// for (let i = 가; i <= 기; i += 1) {
-//   console.log(String.fromCharCode(i), i, (i - 가) % 28);
-// }
+// // for (let i = 가; i <= 기; i += 1) {
+// //   console.log(String.fromCharCode(i), i, (i - 가) % 28);
+// // }
 
 // const KOR_ENG = 'lmnrLMNR';
 
@@ -814,6 +811,7 @@ console.log(hong3.firstName, hong3.lastName);
 //   const len = word.length - 1;
 //   let last = word.charCodeAt(len);
 //   let lastToken = word[len];
+//   // ㄱ, ㅎ 조건식 추가 (순수 자음 추가)
 
 //   if (44032 <= last && last <= 55203 && (last - 44032) % 28 !== 0) res = true;
 //   if (48 <= last && last <= 58) res = true;
@@ -821,9 +819,21 @@ console.log(hong3.firstName, hong3.lastName);
 //   return res;
 // };
 
-// console.log(isEndJaum('강원도'));
-// console.log(isEndJaum('점수 A'));
-// console.log(isEndJaum('254'));
+// // console.log(isEndJaum('강원도'));
+// // console.log(isEndJaum('점수 A'));
+// // console.log(isEndJaum('254'));
+
+// assert.equal(isEndJaum('아지오'), false);
+// assert.equal(isEndJaum('북한강'), true);
+// assert.equal(isEndJaum('뷁'), true);
+// assert.equal(isEndJaum('강원도'), false);
+// assert.equal(isEndJaum('바라당'), true);
+// assert.equal(isEndJaum('ㅜㅜ'), false);
+// assert.equal(isEndJaum('케잌'), true);
+// assert.equal(isEndJaum('점수 A'), false);
+// assert.equal(isEndJaum('알파벳L'), true);
+// assert.equal(isEndJaum('24'), false);
+// assert.equal(isEndJaum('23'), true);
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
@@ -844,6 +854,7 @@ console.log(hong3.firstName, hong3.lastName);
 
 // const initSound = {
 //   ㄱ: '[가-깋]',
+//   // ㄲ 검색
 //   ㄴ: '[나-닣]',
 //   ㄷ: '[다-딯]',
 //   ㄹ: '[라-맇]',
@@ -891,15 +902,18 @@ console.log(hong3.firstName, hong3.lastName);
 // const upperToLower = (str) => {
 //   // 대문자에서 소문자 고르기
 //   const reg = /[A-Z]/g;
-//   return str.replace(reg, (t) => t.toLowerCase());
+//   return str.replace(reg, (t) => `*${t.toLowerCase()}*-`);
 //   // 변환하기
 // };
 
-// // console.log(upperToLower('Senior Coding Learning JS'));
+// console.log(upperToLower('Senior Coding Learning JS'));
 
 // const telfmt = (num) => {
 //   const len = num.length;
 //   let res = '';
+//   // 국번 없는 경우도 추가
+//   //
+
 //   if (len === 8) {
 //     res = num.replace(/(\d{4})(\d{4})/g, '$1-$2');
 //   } else if (len === 9) {

@@ -217,38 +217,27 @@
 // //   return new Promise((resolve, reject) => {});
 // // }
 
-const afterTime = (sec) => {
+// const mapResult = [1, 2, 3].map(async (val) => {
+//   const r = await afterTime(val);
+//   console.log(r);
+//   return r;
+// });
+// console.log('mapResult=', mapResult);
+
+const promi = () =>
   new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000 * sec, sec);
+    setTimeout(resolve, 1000, '---');
   });
-};
 
-// const odds = async (arr) => {
-//   arr.filter((e) => {
-//     const r = await afterTime(e);
-//     console.log(r);
-//     return r % 2 === 1;
-//   });
-// };
+async function f1() {
+  const ret = await promi();
+  return ret;
+}
 
-const odds = [1, 2, 3].filter((val) => {
-  console.log(afterTime(val));
-  // console.log(ret1);
+console.log(await f1());
 
-  // if (r) return true;
-  // else return false;
-});
+// sleep 5;
+// interrupt;
+// x.next
 
-// const odds2 = [1, 2, 3].filter((val) => {});
-
-console.log('odds=', odds);
-
-// const rrr = (val) => {
-//   async function iter() {
-//     val.filter((e) => {
-//       const r = await afterTime(e);
-//       console.log(r);
-//       return r % 2 === 1;
-//     })
-//   }
-// };
+// await으로 컨트롤하지 하지 않으면 yield 하지 않고 바로 반환된다.
