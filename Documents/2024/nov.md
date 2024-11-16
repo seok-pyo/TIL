@@ -38,5 +38,10 @@
   - configure 함수와 subminHandler 함수로 나눠서 작성하는 방법.
 - 사용자 입력 가져오기
   - this 바인딩, 데코레이터, 디스크립터
+  - 데코레이터는 매개변수를 통해서 구분되고, 메서드 데코레이터의 경우 반환하는 객체를 디스크립터로 해석한다.
 - 재사용 가능한 검증 기능 만들기
+  - 입력값을 모아서 처리할 수 있는 자료형 만들기 - 인터페이스 활용
+  - 튜플 형태로 자료 받아서 검증할 수 있도록 하기(gatherUserInput)
+  - validatable 인터페이스 만들기 - validate 함수 만들기 - gatherUserInput 함수 만들고(튜플 타입 정의), validate호출해서 사용 - submitHandler 함수에서 호출해서 사용하기 /
+  - validatable 인터페이스 - validate 함수 - gatherUserInput 함수 - submitHandler 함수
 - 프로젝트 목록 렌더링 하기
