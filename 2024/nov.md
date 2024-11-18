@@ -56,5 +56,11 @@
     - addProject 메서드로 프로젝트 객체를 만들고, projects 배열에 추가 - 리스터 함수 배열을 호출해서 프로젝트 배열을 전달
   - ProjectList 클래스에서 입력을 받을 수 있도록 하고, 받은 입력을 addProject를 실행해서 prjState 클래스를 호출
   - ProjectList가 생성될 때, prjState.addListener를 추가한다. 
-
+## 18일 - 월
+- 클래스, 커스텀 타입으로 교체하기
+- enum status 자료형 추가 
+- eventListener에서 필터링을 통해서 active / finished 따른 렌더링 나누기 / 열거형으로 프로젝트 필터링 하기(projectList 클래스에서 수행)
+- 중복 렌더링 방지
+- 클래스 필드 키워드 public / private / protected / readonly / static / abstract
+- 디스크립터란? value는 누가 가지고 있나?
     
