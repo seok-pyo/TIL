@@ -47,4 +47,14 @@
   - validatable 인터페이스 만들기 - validate 함수 만들기 - gatherUserInput 함수 만들고(튜플 타입 정의), validate호출해서 사용 - submitHandler 함수에서 호출해서 사용하기 /
   - validatable 인터페이스 - validate 함수 - gatherUserInput 함수 - submitHandler 함수
   - submitHnadler 함수에서 gatherUserInput 함수의 반환값이 튜플인지 확인 후에 값을 사용하는 방법 - Array.isArray(값) : 왜냐하면 튜플도 배열이기 때문에, 배열인지 확인한다.
+## 17일 - 일
 - 프로젝트 목록 렌더링 하기
+- 싱글톤으로 애플리메이션 상태 관리하기
+  - prjState 상태관리 클래스 생성
+    - private static 키워드로 싱글톤 인스턴스 생성
+    - addListener 메서드를 만들어서 list가 변경될 때 listener 함수를 추가
+    - addProject 메서드로 프로젝트 객체를 만들고, projects 배열에 추가 - 리스터 함수 배열을 호출해서 프로젝트 배열을 전달
+  - ProjectList 클래스에서 입력을 받을 수 있도록 하고, 받은 입력을 addProject를 실행해서 prjState 클래스를 호출
+  - ProjectList가 생성될 때, prjState.addListener를 추가한다. 
+
+    
