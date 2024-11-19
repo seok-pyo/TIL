@@ -63,4 +63,7 @@
 - 중복 렌더링 방지
 - 클래스 필드 키워드 public / private / protected / readonly / static / abstract
 - 디스크립터란? value는 누가 가지고 있나?
+## 19일 - 화
+- 운영체제의 역사(ms-dos / unix)
+- 운영체제 자원 관리자
     
