@@ -81,3 +81,8 @@
 - 접근자 디스크립터와 getter의 차이점 / this.method Vs this.method();
 - 메서드 데코레이터는 어떻게 실행되는가
 - 인터페이스 Implements
+- interface : 순수하게 청사진만을 제공 / 메서드 구현을 가질 수 없음 / 다중 구현이 가능
+- abstract class : 추상 메서드와 일반 메서드를 모두 가질 수 있음 / 단일 상속만 가능
+- abstract 메서드는 abstract class 내에서만 사용가능 / 구현을 하지 않고 자식 클래스에서 구현하도록 강제하는 메서드
+- abstract 메서드는 인스턴스화 할 수 없음. 상속을 통해서 자식 클래스에서 구현해야 함. 
+
