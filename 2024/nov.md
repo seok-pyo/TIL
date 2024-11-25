@@ -91,6 +91,16 @@
 ## 22일 - 금
 - 모듈 / 네임스페이스, esm
 - 기본적으로는 전역 스코프, export로 노출시켜야 모듈로 인식
-# 23일 - 토
+## 23일 - 토
 - JSON.stringify는 객체를 JSON 형태의 문자열로 반환
+## 25일 - 월
+- 데코레이터 팩토리를 실행하면 반환되는 데코레이터를 실행할 수 있다. decorator()();
+- 
+- webpack 설정하기 / 번들러를 사용하는 이유
+- declare
+- 기본적으로 스크립트의 변수는 전역
+- npm init / tsc --init
+- 클래스는 클래스이자 타입
+- REST Api / HTTP protocol / HTTP 메서드 / URI, URL
+- SDK
 
