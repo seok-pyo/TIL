@@ -128,3 +128,10 @@ HTTP 프로토콜은 클라이언트가 서버에 요청(request)를 보내고, 
 
 URL (Locator) 자원의 위치, 하나의 파일 위치
 URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL에 식별자가 붙으면 URI 라고 할 수 있다.
+## 26일 화
+- Fetch 메서드
+- async/await
+- 이벤트 위임(버블링, 타깃, 캡처링) - 이벤트의 시작은 window 객체
+- $0
+- matches() / getAttribute() / Object.values() / Object.keys / map / join
+- 상위 노드 찾는 함수 구현
