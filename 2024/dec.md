@@ -16,3 +16,4 @@
   - Levenshtein - bit mask
   - Did you mean.js 파일
   - new Uint32Array()
+  - 0x10000 / 16진수 변환
