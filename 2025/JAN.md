@@ -32,7 +32,7 @@ dispatch를 실행할 수 있다. 해당 함수에는 리덕스가 dispatch를 �
 - 비동기 작업을 실행할 액션을 useEffect를 이용해서 필요할 때에만 업데이트가 되도록 한다. 의존성에는 dispatch를 넣어준다.
 
 
-### Firebase로 간단한 백엔드 구축하기
+### Firebase로 백엔드 구축하기
 realtime database / cloud firestore
 
 - 사용자 계정 관리: Firebase Authentication
