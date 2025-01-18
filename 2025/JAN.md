@@ -48,5 +48,16 @@ realtime database / cloud firestore
 - 도메인: 사용자가 컨텐츠에 접근할 수 있는 주소(URL)
 - 네트워크가: 서버를 통해 콘텐츠를 사용자에게 전송할 수 있는 네트워크 연결
 
+# 18
 
+### React-router
+- react-router-dom
+- createBrouserRouter
+- RouterProvider
+- Link
+- { path, element, children }
+
+### module.css
+- css 파일 로컬로 적용하기
+ 
 
