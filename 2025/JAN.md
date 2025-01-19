@@ -56,6 +56,9 @@ realtime database / cloud firestore
 - RouterProvider
 - Link
 - { path, element, children }
+- NavLink
+- useParams / useNavigate
+- absolute/relative path
 
 ### module.css
 - css 파일 로컬로 적용하기
