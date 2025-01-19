@@ -7,7 +7,9 @@
 Javascript 
 - 호이스팅
 - 연산자
-- 
+- 이벤트위임
+- fetch 메서드
+- async/await
 
 - - - 
 
@@ -19,6 +21,8 @@ Typescript
 - enum
 - 클래스, 커스텀 타입
 - 싱글톤
+- 인터페이스
+- 추상클래스
 
 - - - 
 
@@ -28,9 +32,11 @@ React
 
 Web
 - 서버
-- [nodeJs](https://github.com/seok-pyo/TIL/blob/main/2024/nov.md#18%EC%9D%BC---%EC%9B%94)
+- [nodeJs](https://github.com/seok-pyo/TIL/blob/main/2024/nov.md#18)
 - express
 - IP
+- RESTful API
+- HTTP
 
 - - - 
 
@@ -38,6 +44,8 @@ System
 - 프로세스 & 스레드
 - 터미널
 - npm
+- 운영체제
+- 비트/진법/주소
 
 
 
