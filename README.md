@@ -86,7 +86,7 @@
 
 <br>
 
-[INDEX](#index)
+
 ### 할당
 ```bash
 사실 아래의 식은 수학적으로 성립하지 않고, 메모리의 관점에서 봤을 때(할당의 개념) 의미가 성립한다.
@@ -121,7 +121,7 @@ parameter는 함수를 구성하고 있는 변수 / argument는 함수의 전달
 
 Null 병합 연산자, BigInt 리터럴
 
-[INDEX](#index)
+
 <br>
 
 
@@ -157,7 +157,7 @@ Null 병합 연산자, BigInt 리터럴
   - 서버는 3000번 포트에서 이 요청을 수신하고, 정의된 콜백 함수를 통해 응답을 처리한다.
   - 요청을 처리한 후, 응답을 클라이언트에게 보낸다.
 
-[INDEX](#index)
+
 <br>
 
   ### 프로세스, 스레드, CPU
@@ -199,7 +199,7 @@ Null 병합 연산자, BigInt 리터럴
 - 정적 IP 주소는 수동으로 설정되며, 변경되지 않는다.
 - 127.0.0.1의 의미 : 루프백 주소 : 이는 컴퓨터가 자신의 네트워크 인터페이스를 통해 자기 자신과 동신할 수 있도록 해주는 주소이다.
 
-[INDEX](#index)
+
 <br>
 
 ### 웹서버 2
@@ -233,7 +233,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 
 - Serverless function
 
-[INDEX](#index)
+
 - - -
 
 ## 2024-11-13
@@ -247,7 +247,6 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - template.content 속성 / documentFragment 객체(DOM 컨텐츠를 포함하는 임시 컨테이너)
 - insertAdjacentElement
 
-[INDEX](#index)
 - - - 
 
 ## 2024-11-14
@@ -260,7 +259,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - 콜백함수 실행 순서
   - [ 이벤트 리스너가 백그라운드에 등록 - 이벤트 발생 - 이벤트 객체를 핸들러에 넘기고, 콜백큐로 이동 - 스택이 다 비면 콜스택으로 이동 - 실행 ]
 
-[INDEX](#index)
+
 - - - 
 
 ## 2024-11-15
@@ -279,7 +278,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - 선언과 정의 차이점
 - 제네릭, 제네릭 유틸리티 타입
 
-[INDEX](#index)
+
 - - - 
 
 ## 2024-11-16
@@ -302,7 +301,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
   - validatable 인터페이스 - validate 함수 - gatherUserInput 함수 - submitHandler 함수
   - submitHnadler 함수에서 gatherUserInput 함수의 반환값이 튜플인지 확인 후에 값을 사용하는 방법 - Array.isArray(값) : 왜냐하면 튜플도 배열이기 때문에, 배열인지 확인한다.
 
-[INDEX](#index)
+
 - - - 
 
 ## 2024-11-17
@@ -316,7 +315,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
   - ProjectList 클래스에서 입력을 받을 수 있도록 하고, 받은 입력을 addProject를 실행해서 prjState 클래스를 호출
   - ProjectList가 생성될 때, prjState.addListener를 추가한다.
 
-[INDEX](#index)
+
 - - - 
 
 ## 2024-11-18
@@ -328,7 +327,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - 클래스 필드 키워드 public / private / protected / readonly / static / abstract
 - 디스크립터란? value는 누가 가지고 있나?
 
-[INDEX](#index)
+
 
 - - - 
 
@@ -342,7 +341,6 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - 퍼블릭 메서드는 관례상 프라이빗 메서드 위에
 - super, protected 키워드
 
-[INDEX](#index)
 - - - 
 
 ## 2024-11-20
@@ -362,7 +360,7 @@ url과 method를 이용해서 다양한 상황에서 분기를 나눠서 서버�
 - abstract 메서드는 abstract class 내에서만 사용가능 / 구현을 하지 않고 자식 클래스에서 구현하도록 강제하는 메서드
 - abstract 메서드는 인스턴스화 할 수 없음. 상속을 통해서 자식 클래스에서 구현해야 함.
 
-[INDEX](#index)
+
 
 ## 2024-11-21
 
@@ -417,7 +415,7 @@ HTTP 프로토콜은 클라이언트가 서버에 요청(request)를 보내고, 
 URL (Locator) 자원의 위치, 하나의 파일 위치
 URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL에 식별자가 붙으면 URI 라고 할 수 있다.
 
-[INDEX](#index)
+
 - - - 
 
 ## 2024-11-26
@@ -433,7 +431,7 @@ URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL
 
 - imperative(명령형) - how / declarative(선언형) - what
 
-[INDEX](#index)
+
 - - -
 
 ## 2024-11-29
@@ -447,7 +445,7 @@ URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL
   5. response.json() 호출 -> 새로운 promise 반환
   6. .then() 체이닝 반복
 
-[INDEX](#index)
+
 - - -
 
 ## 2024-12-08
@@ -461,7 +459,7 @@ URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL
   - 동적: 필요에 따라 값을 수정하거나 삭제할 수 있다.
   - 운영체제에 따라 환경변수의 구현 방식이 조금씩 다르다.
 
-[INDEX](#index)
+
 - - -
 
 ## 2024-12-12
@@ -477,7 +475,7 @@ URI 식별자, 파일이 위한 곳에서 구분할 수 있도록 하는것. URL
 - new Uint32Array()
 - 0x10000 / 16진수 변환
 
-[INDEX](#index)
+
 - - -
 
 ## 2025-01-16
@@ -510,7 +508,7 @@ useSelector - react-redux
 
 - store에서 필요한 state를 '바로' 호출
 
-[INDEX](#index)
+
 - - -
 
 ## 2025-01-17
@@ -539,14 +537,13 @@ realtime database / cloud firestore
 - 도메인: 사용자가 컨텐츠에 접근할 수 있는 주소(URL)
 - 네트워크가: 서버를 통해 콘텐츠를 사용자에게 전송할 수 있는 네트워크 연결
 
-[INDEX](#index)
 - - -
 
 ## 2025-01-18
 
 ### React-router
 
-- react-router-dom
+- **react-router-dom**
 - createBrouserRouter
 - RouterProvider
 - Link
@@ -559,7 +556,40 @@ realtime database / cloud firestore
 
 - css 파일 로컬로 적용하기
 
-[INDEX](#index)
 - - -
 
+## 2025-01-19
+
+리액트 라우터 왜 필요한가?
+
+data fetching And submission
+
+What is Routing? 
+URL에 따라서 다르게 반응하는 사이트
+
+기존에는 page change = request + response
+클라이언트에서 URL을 감시하고 헤당 URL이 변경되면 다른 리액트 컴포넌트를 로딩
+
+1. 우리가 지원하려는 URL과 경로를 정의, 어떤 컴포넌트가 렌더링 될 것인지 정의
+2. 라우터를 활성화, 컴포넌트를 로딩
+3. 페이지가 이동하는 경로를 확인하는 단계
+
+** 페이지로써 로딩되는 컴포넌트
+
+[레이아웃 컴포넌트 사용하기, 중첩 라우트]
+
+Link 컴포넌트 - 앵커 태그로 구성, 기본 기본 http 요청을 차단
+
+NavLink - 활성화된 주소 하이라이팅
+
+useNavigate hook
+
+동적으로 라우팅하기 / useParams
+
+PATH
+/ : absolute path
+상대 경로와 절대 경로
+
+index Router
+Outlet 
 
