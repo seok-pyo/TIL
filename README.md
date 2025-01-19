@@ -10,7 +10,7 @@
 - [구조분해할당](#구조분해할당)
 - [이벤트위임](#2024-11-26(화))
 - [fetch 메서드](#2024-11-29(금))
-- [async/await](#async/async.js)
+- [async/await](#/async/async.js)
 
 <br>
 
