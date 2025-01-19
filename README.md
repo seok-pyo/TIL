@@ -1,19 +1,18 @@
-# Field Notes
+# Index
+개발과 관련된 지식을 기록합니다. 
 
-웹개발과 관련된 지식을 모아두는 곳입니다. 
+<br>
 
-- - - 
-
-Javascript 
-- 호이스팅
-- 연산자
+## Javascript 
+- [호이스팅]()
+- [연산자]()
 - 이벤트위임
 - fetch 메서드
 - async/await
 
-- - - 
+<br>
 
-Typescript 
+## Typescript 
 - 데코레이터
 - 디스크립터
 - 제네릭
@@ -24,13 +23,13 @@ Typescript
 - 인터페이스
 - 추상클래스
 
-- - - 
+<br>
 
-React
+## React
 
-- - - 
+<br> 
 
-Web
+## Web
 - 서버
 - [nodeJs](https://github.com/seok-pyo/TIL/blob/main/2024/nov.md#18)
 - express
@@ -38,9 +37,9 @@ Web
 - RESTful API
 - HTTP
 
-- - - 
+<br>
 
-System
+## System
 - 프로세스 & 스레드
 - 터미널
 - npm
