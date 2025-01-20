@@ -11,7 +11,7 @@
 - [parameter/argument](#parameter--argument)
 - [이벤트위임](#2024-11-26)
 - [fetch 메서드](#2024-11-29)
-- [async/await](./documents/async/async.js)
+- [async/await](./Documents/async/async.js)
 - [데이터 할당](#2024-11-13)
 - [콜백함수](#2024-11-14)
 - [V8 엔진](./v8-debug.md)
