@@ -1,4 +1,4 @@
-# Field Note
+# side Note
 
 과정을 기록합니다.
 
