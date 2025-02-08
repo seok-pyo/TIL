@@ -511,3 +511,32 @@ PATH
 
 index Router
 Outlet
+
+## 2025-02-09
+
+tan-stack query 왜 필요한가?
+
+useQuery hook - QueryClient - QueryClientProvider
+
+fetch하는 작업을 useEffect와 state를 대신해서 사용할 수 있다.
+
+dart레서 생성자를 초기화하는 방식
+  - 위치 지정 매개변수
+  - 이름 지정 매개변수
+
+dart에서 리스트 초기화를 사용하면, 객체가 생성되기 전에 특정 변수를 초기화할 수 있다.
+상수변수 final, late변수를 초기화할 때 사용할 수 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
