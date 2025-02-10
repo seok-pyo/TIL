@@ -527,6 +527,22 @@ dart레서 생성자를 초기화하는 방식
 dart에서 리스트 초기화를 사용하면, 객체가 생성되기 전에 특정 변수를 초기화할 수 있다.
 상수변수 final, late변수를 초기화할 때 사용할 수 있다.
 
+## 2025-02-10
+
+tan-stack query 쿼리 무효화
+useMutate hook
+invalidateQueries
+쿼리 무효 -> 인스턴스 새로 생성 -> 업데이트
+
+csv(comma seperated values)
+스프레드 시트 > csv > node > firebase > flutter
+
+view - model
+
+statemagement
+inhereted widget / provider / changeNotifier / BloC / GetX / RiverPod
+
+
 
 
 
