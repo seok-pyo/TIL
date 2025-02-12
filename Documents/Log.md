@@ -542,7 +542,12 @@ view - model
 statemagement
 inhereted widget / provider / changeNotifier / BloC / GetX / RiverPod
 
+## 2025-02-12
 
+CustomScrollView 
+Slivers
+constraint
+ListView - shrinkwrap
 
 
 
